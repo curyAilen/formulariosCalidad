@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>formulario front</title>
+</head>
+
+<body>
+    <div class="container-fluid" id="contenedor">
+        <div class="row  fondoGris">
+
+            <p class="text-center col-2">Logo</p>
+            <h1 class=" text-center col-8">Procedimiento Propio</h1>
+            <p class="text-center col-2">Siglas</p>
+
+        </div>
+
+    </div>
+
+    <div class="container mt-5 mb-2  tablaInfo">
+        <div class="row encabezadoProcedimientoPropio ">
+            <h4>Sumario</h4>
+            <p> Incluye un índice o tabla con los títulos de cada punto del procedimiento y el número de páginas donde se encuentra</p>
+
+        </div>
+        <table class="table table-responsive-md table-striped tablaDetalle">
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>1- Objeto</h6>
+                    <p>Se debe describir en este punto, de forma clara el propósito o uso pretendido del procedimiento.</p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>2- Alcance</h6>
+                    <p>Indicar las actividades y procesos donde se aplica el documento y/o cuales son los sectores a los que alcanza su aplicación.</p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>3- Referencias</h6>
+                    <p>Incluir detalle de la normativa de referencia (leyes, decretos, reglamentos, instructivos, manuales).</p>
+                </td>
+
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>4- Definiciones</h6>
+                    <p>Incluir todas las definiciones de funciones o términos particulares y específicos de la actividad propia de la Organización y /o de la Norma ISO 9000 que ayuden a una mejor interpretación por parte del usuario.</p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>5- Procedimientos</h6>
+                    <p>Desarrollo</p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>7- Medio de retroalimentación. Metodología</h6>
+                    <p>Listar las funciones y/o sectores responsables de realizar y controlar las actividades previstas. Se incluyen todos los registros e instructivos que se relacionen con el procedimiento para su ejecución.</p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
+                    <h6>8- Perfiles</h6>
+                </td>
+            </tr>
+
+        </table>
+        <p> <span> Pie de portada: </span>La función del Pie de la portada es aclarar qué párrafo o párrafos se modificaron en la versión, cuál es la versión vigente y desde qué fecha. </p>
+    </div>
+    <div class="container">
+        <form method="get" action="">
+            <div class="header ">
+                <h4>Completar formulario</h4>
+            </div>
+
+            <div class="form-group">
+                <label for="objetivos">Objetivo</label>
+                <textarea class="form-control" id="objetivos" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="alcance">Alcance</label>
+                <textarea class="form-control" id="alcance" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="referencias">Referencias</label>
+                <textarea class="form-control" id="referencias" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="definiciones">Definiciones</label>
+                <textarea class="form-control" id="definiciones" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="procedimientos">Procedimientos</label>
+                <textarea class="form-control" id="procedimientos" rows="3"></textarea>
+            </div>
+            <p>FALTA PUNTO 6 DOCUMENTACIÓN ASOCIADA</p>
+            <div class="row">
+                <div class="form-group col-2">
+                    <label for="NroCodificacion">Codificación del documento</label>
+                    <input class="form-control" type="text" placeholder="" id="NroCodificacion">
+                </div>
+                <div class="form-group col-4">
+                    <label for="nombreDocumento">Nombre del documento</label>
+                    <input class="form-control" type="text" placeholder="" id="nombreDocumento">
+                </div>
+                <div class="form-group col-4">
+                    <label for="almacenamiento">Almacenamiento                 </label>
+                    <input class="form-control" type="text" placeholder="(adonde se encuentra, ej: Pierre, Oficina Area)" id="almacenamiento">
+                </div>
+                <div class="form-group col-4">
+                    <label for="protección">
+                        Protección
+                      </label>
+                    <input class="form-control" type="text" placeholder="(Quien tiene acceso ej: Privado  / Publico, HSN, Area, Etc)" id="protección">
+                </div>
+                <div class="form-group col-4">
+                    <label for="tiempoRetencion">Tiempo de retención
+                    </label>
+                    <input class="form-control" type="text" placeholder="    (tiempo de vigencia)" id="tiempoRetencion">
+                </div>
+                <div class="form-group col-4">
+                    <label for="disposicionFinal">Disposición Final </label>
+                    <input class="form-control" type="text" placeholder="(ej: borrado. 
+                    backup. destrucción" id="disposicionFinal">
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <label for="medioDeRetroalimentacion">Medio de retroalimentación. Metodología</label>
+                <textarea class="form-control" id="medioDeRetroalimentacion" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="perfiles">Perfiles</label>
+                <textarea class="form-control" id="perfiles" rows="3"></textarea>
+            </div>
+
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

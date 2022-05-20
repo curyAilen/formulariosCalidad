@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+}
+
+#contenedorEncabezado {
+    padding-top: 50PX;
+    margin-left: 150px;
+    margin-right: 150px;
+    max-width: 100%;
+}
+
+.fondoGris {
+    background-color: rgb(216, 216, 216);
+}
+
+.tablaInfo {
+    border: 2px solid #11B09C;
+    padding-bottom: 45px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+    border-radius: 0 115px 0 80px;
+}
+
+.tablaInfo p {
+    font-size: 0.9rem;
+}
+
+.tablaInfo h6 {
+    font-size: 1rem;
+}
