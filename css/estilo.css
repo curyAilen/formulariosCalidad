@@ -33,3 +33,24 @@ body {
 .tablaInfo h6 {
     font-size: 1rem;
 }
+
+.titulo {
+    text-align: center;
+}
+
+.formularioFondo {
+    background-color: rgba(246, 246, 246, 0.872);
+}
+
+.encabezadoFormularioTablas {
+    background-color: #11B09C;
+}
+
+table td {
+    border: 1.5px solid black;
+}
+
+.encabezadoFormularioTablas h6 {
+    color: white;
+    text-align: center;
+}
