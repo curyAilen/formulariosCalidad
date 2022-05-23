@@ -10,23 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/estilo.css">
     <title>formulario front</title>
 </head>
 
 <body>
-    <div class="container-fluid" id="contenedor">
+    <div class="container" id="contenedor">
         <div class="row  fondoGris">
-
             <p class="text-center col-2">Logo</p>
             <h1 class=" text-center col-8">Procedimiento Propio</h1>
             <p class="text-center col-2">Siglas</p>
-
         </div>
-
     </div>
-
     <div class="container mt-5 mb-2  tablaInfo">
         <div class="row encabezadoProcedimientoPropio ">
             <h4>Sumario</h4>
@@ -38,7 +35,8 @@
             <tr>
                 <td>
                     <h6>1- Objeto</h6>
-                    <p>Se debe describir en este punto, de forma clara el propósito o uso pretendido del procedimiento.</p>
+                    <p>Se debe describir en este punto, de forma clara el propósito o uso pretendido del procedimiento.
+                    </p>
                 </td>
             </tr>
             <!--FILA-->
@@ -52,7 +50,8 @@
             <tr>
                 <td>
                     <h6>3- Referencias</h6>
-                    <p>Incluir detalle de la normativa de referencia (leyes, decretos, reglamentos, instructivos, manuales).</p>
+                    <p>Incluir detalle de la normativa de referencia (leyes, decretos, reglamentos, instructivos, manuales).
+                    </p>
                 </td>
 
             </tr>
@@ -74,7 +73,8 @@
             <tr>
                 <td>
                     <h6>7- Medio de retroalimentación. Metodología</h6>
-                    <p>Listar las funciones y/o sectores responsables de realizar y controlar las actividades previstas. Se incluyen todos los registros e instructivos que se relacionen con el procedimiento para su ejecución.</p>
+                    <p>Listar las funciones y/o sectores responsables de realizar y controlar las actividades previstas. Se incluyen todos los registros e instructivos que se relacionen con el procedimiento para su ejecución.
+                    </p>
                 </td>
             </tr>
             <!--FILA-->
@@ -87,93 +87,101 @@
         </table>
         <p> <span> Pie de portada: </span>La función del Pie de la portada es aclarar qué párrafo o párrafos se modificaron en la versión, cuál es la versión vigente y desde qué fecha. </p>
     </div>
-    <div class="container">
-        <form method="get" action="">
+    <div class="container formularioFondo">
+        <form method="get" action="" class="row mb-5">
             <div class="header ">
-                <h4>Completar formulario</h4>
+                <h4 class="titulo">Procedimiento Propio</h4>
             </div>
-
-            <div class="form-group">
+            <div class="form-group col-12">
                 <label for="objetivos">Objetivo</label>
-                <textarea class="form-control" id="objetivos" rows="3"></textarea>
+                <textarea class="form-control" id="objetivos" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
                 <label for="alcance">Alcance</label>
-                <textarea class="form-control" id="alcance" rows="3"></textarea>
+                <textarea class="form-control" id="alcance" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
                 <label for="referencias">Referencias</label>
-                <textarea class="form-control" id="referencias" rows="3"></textarea>
+                <textarea class="form-control" id="referencias" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
                 <label for="definiciones">Definiciones</label>
-                <textarea class="form-control" id="definiciones" rows="3"></textarea>
+                <textarea class="form-control" id="definiciones" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
                 <label for="procedimientos">Procedimientos</label>
-                <textarea class="form-control" id="procedimientos" rows="3"></textarea>
+                <textarea class="form-control" id="procedimientos" rows="3" required></textarea>
             </div>
-            <p>FALTA PUNTO 6 DOCUMENTACIÓN ASOCIADA</p>
-            <div class="row">
-                <div class="form-group col-2">
-                    <label for="NroCodificacion">Codificación del documento</label>
-                    <input class="form-control" type="text" placeholder="" id="NroCodificacion">
-                </div>
-                <div class="form-group col-4">
-                    <label for="nombreDocumento">Nombre del documento</label>
-                    <input class="form-control" type="text" placeholder="" id="nombreDocumento">
-                </div>
-                <div class="form-group col-4">
-                    <label for="almacenamiento">Almacenamiento                 </label>
-                    <input class="form-control" type="text" placeholder="(adonde se encuentra, ej: Pierre, Oficina Area)" id="almacenamiento">
-                </div>
-                <div class="form-group col-4">
-                    <label for="protección">
-                        Protección
-                      </label>
-                    <input class="form-control" type="text" placeholder="(Quien tiene acceso ej: Privado  / Publico, HSN, Area, Etc)" id="protección">
-                </div>
-                <div class="form-group col-4">
-                    <label for="tiempoRetencion">Tiempo de retención
-                    </label>
-                    <input class="form-control" type="text" placeholder="    (tiempo de vigencia)" id="tiempoRetencion">
-                </div>
-                <div class="form-group col-4">
-                    <label for="disposicionFinal">Disposición Final </label>
-                    <input class="form-control" type="text" placeholder="(ej: borrado. 
-                    backup. destrucción" id="disposicionFinal">
-                </div>
+            <!--PUNTO 6 + GRILLA-->
+            <br>
+
+            <div class="form-group col-4 mt-5">
+                <label for="NroCodificacion">Codificación del documento</label>
+                <input class="form-control" type="text" placeholder="" id="NroCodificacion" required>
             </div>
-
-
-
-
-
-
-            <div class="form-group">
+            <div class="form-group col-3 mt-5">
+                <label for="nombreDocumento">Nombre del documento</label>
+                <input class="form-control" type="text" placeholder="" id="nombreDocumento" required>
+            </div>
+            <div class="form-group col-5 mt-5">
+                <label for="almacenamiento">Almacenamiento</label>
+                <input class="form-control" type="text" placeholder="A donde se encuentra, ej: Pierre Oficina área" id="almacenamiento" required>
+            </div>
+            <div class="form-group col-5  mt-3 mb-2">
+                <label for="protección">Protección</label>
+                <input class="form-control" type="text" placeholder="Quien tiene acceso ej: Privado/ Publico, HSN, Etc" id="protección" required>
+            </div>
+            <div class="form-group col-3 mt-3 mb-2">
+                <label for="tiempoRetencion">Tiempo de retención</label>
+                <input class="form-control" type="text" placeholder="tiempo de vigencia" id="tiempoRetencion" required>
+            </div>
+            <div class="form-group col-4 mt-3 mb-2">
+                <label for="disposicionFinal">Disposición final </label>
+                <input class="form-control" type="text" placeholder="ej: borrado. backup. destrucción" id="disposicionFinal" required>
+            </div>
+            <br>
+            <table class="table table-responsive-md table-striped tablaDetalle mt-5 col-12">
+                <!--FILA-->
+                <tr class="encabezadoFormularioTablas">
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Codificación del documento</h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Nombre del documento</h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Almacenamiento</h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Protección</h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Tiempo de retención</h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6>Disposición final </h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="form-group col-6">
                 <label for="medioDeRetroalimentacion">Medio de retroalimentación. Metodología</label>
-                <textarea class="form-control" id="medioDeRetroalimentacion" rows="3"></textarea>
+                <textarea class="form-control" id="medioDeRetroalimentacion" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
                 <label for="perfiles">Perfiles</label>
-                <textarea class="form-control" id="perfiles" rows="3"></textarea>
+                <textarea class="form-control" id="perfiles" rows="3" required></textarea>
             </div>
-
-
-
-
+            <div class="col-auto">
+                <button type="submit" class="mt-5 btn btn-primary mb-2">Enviar</button>
+            </div>
         </form>
     </div>
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
