@@ -72,6 +72,14 @@
             <!--FILA-->
             <tr>
                 <td>
+                    <h6>6- Documentación Asociada</h6>
+                    <p>Listar las funciones y/o sectores responsables de realizar y controlar las actividades previstas. Se incluyen todos los registros e instructivos que se relacionen con el procedimiento para su ejecución.
+                    </p>
+                </td>
+            </tr>
+            <!--FILA-->
+            <tr>
+                <td>
                     <h6>7- Medio de retroalimentación. Metodología</h6>
                     <p>Listar las funciones y/o sectores responsables de realizar y controlar las actividades previstas. Se incluyen todos los registros e instructivos que se relacionen con el procedimiento para su ejecución.
                     </p>
@@ -88,59 +96,59 @@
         <p> <span> Pie de portada: </span>La función del Pie de la portada es aclarar qué párrafo o párrafos se modificaron en la versión, cuál es la versión vigente y desde qué fecha. </p>
     </div>
     <div class="container formularioFondo">
-        <form method="get" action="" class="row mb-5">
+        <form method="get" action="" class="row mb-5" name="procedimientoPropio">
             <div class="header ">
                 <h4 class="titulo">Procedimiento Propio</h4>
             </div>
             <div class="form-group col-12">
                 <label for="objetivos">Objetivo</label>
-                <textarea class="form-control" id="objetivos" rows="3" required></textarea>
+                <textarea class="form-control" id="objetivos" rows="3"></textarea>
             </div>
             <div class="form-group col-6">
                 <label for="alcance">Alcance</label>
-                <textarea class="form-control" id="alcance" rows="3" required></textarea>
+                <textarea class="form-control" id="alcance" rows="3"></textarea>
             </div>
             <div class="form-group col-6">
                 <label for="referencias">Referencias</label>
-                <textarea class="form-control" id="referencias" rows="3" required></textarea>
+                <textarea class="form-control" id="referencias" rows="3"></textarea>
             </div>
             <div class="form-group col-6">
                 <label for="definiciones">Definiciones</label>
-                <textarea class="form-control" id="definiciones" rows="3" required></textarea>
+                <textarea class="form-control" id="definiciones" rows="3"></textarea>
             </div>
             <div class="form-group col-6">
                 <label for="procedimientos">Procedimientos</label>
-                <textarea class="form-control" id="procedimientos" rows="3" required></textarea>
+                <textarea class="form-control" id="procedimientos" rows="3"></textarea>
             </div>
             <!--PUNTO 6 + GRILLA-->
             <br>
 
             <div class="form-group col-4 mt-5">
                 <label for="NroCodificacion">Codificación del documento</label>
-                <input class="form-control" type="text" placeholder="" id="NroCodificacion" required>
+                <input class="form-control" type="text" placeholder="" id="NroCodificacion">
             </div>
             <div class="form-group col-3 mt-5">
                 <label for="nombreDocumento">Nombre del documento</label>
-                <input class="form-control" type="text" placeholder="" id="nombreDocumento" required>
+                <input class="form-control" type="text" placeholder="" id="nombreDocumento">
             </div>
             <div class="form-group col-5 mt-5">
                 <label for="almacenamiento">Almacenamiento</label>
-                <input class="form-control" type="text" placeholder="A donde se encuentra, ej: Pierre Oficina área" id="almacenamiento" required>
+                <input class="form-control" type="text" placeholder="A donde se encuentra, ej: Pierre Oficina área" id="almacenamiento">
             </div>
             <div class="form-group col-5  mt-3 mb-2">
-                <label for="protección">Protección</label>
-                <input class="form-control" type="text" placeholder="Quien tiene acceso ej: Privado/ Publico, HSN, Etc" id="protección" required>
+                <label for="proteccion">Protección</label>
+                <input class="form-control" type="text" placeholder="Quien tiene acceso ej: Privado/ Publico, HSN, Etc" id="proteccion">
             </div>
             <div class="form-group col-3 mt-3 mb-2">
                 <label for="tiempoRetencion">Tiempo de retención</label>
-                <input class="form-control" type="text" placeholder="tiempo de vigencia" id="tiempoRetencion" required>
+                <input class="form-control" type="text" placeholder="tiempo de vigencia" id="tiempoRetencion">
             </div>
             <div class="form-group col-4 mt-3 mb-2">
                 <label for="disposicionFinal">Disposición final </label>
-                <input class="form-control" type="text" placeholder="ej: borrado. backup. destrucción" id="disposicionFinal" required>
+                <input class="form-control" type="text" placeholder="ej: borrado. backup. destrucción" id="disposicionFinal">
             </div>
             <br>
-            <table class="table table-responsive-md table-striped tablaDetalle mt-5 col-12">
+            <table id="grillaDocumentacionAsosciada" class="table table-responsive-md table-striped tablaDetalle mt-5 col-12">
                 <!--FILA-->
                 <tr class="encabezadoFormularioTablas">
                     <!--COLUMNA-->
@@ -168,20 +176,94 @@
                         <h6>Disposición final </h6>
                     </td>
                 </tr>
+                <tr class="">
+                    <!--COLUMNA-->
+                    <td>
+                        <h6 name="codigoDocumentoTabla" id="codigoDocumentoTabla"></h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6 name="nombreDocumentoTabla" id="nombreDocumentoTabla"></h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6 name="almacenamientoTabla" id="almacenamientoTabla"></h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6 name="proteccionTabla" id="proteccionTabla"></h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+                        <h6 name="tiempoRetencionTabla" id="tiempoRetencionTabla"></h6>
+                    </td>
+                    <!--COLUMNA-->
+                    <td>
+
+                        <h6 name="disposicionFinalTabla" id="disposicionFinalTabla"></h6>
+                    </td>
+                </tr>
             </table>
             <div class="form-group col-6">
                 <label for="medioDeRetroalimentacion">Medio de retroalimentación. Metodología</label>
-                <textarea class="form-control" id="medioDeRetroalimentacion" rows="3" required></textarea>
+                <textarea class="form-control" id="medioDeRetroalimentacion" rows="3"></textarea>
             </div>
             <div class="form-group col-6">
                 <label for="perfiles">Perfiles</label>
-                <textarea class="form-control" id="perfiles" rows="3" required></textarea>
+                <textarea class="form-control" id="perfiles" rows="3"></textarea>
             </div>
             <div class="col-auto">
-                <button type="submit" class="mt-5 btn btn-primary mb-2">Enviar</button>
+                <button type="submit" class="mt-5 btn btn-primary mb-2" onClick="obtenerDatos()">Enviar</button>
             </div>
         </form>
     </div>
+
+    <script type="text/javascript">
+        const form = document.getElementById('procedimientoPropio');
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let guardarDatosGrilla = new FormData(form)
+            let datosGrillasRef = document.getElementById('grillaDocumentacionAsosciada');
+            let newDatosGrillasRow = datosGrillasRef.insertRow(-1);
+            let newDatosGrillasCelda = datosGrillasRef.insertCell(0);
+        })
+
+        guardarDatosGrilla.get('NroCodificacion');
+        guardarDatosGrilla.get('nombreDocumento');
+        guardarDatosGrilla.get('almacenamiento');
+        guardarDatosGrilla.get('proteccion');
+        guardarDatosGrilla.get('tiempoRetencion');
+        guardarDatosGrilla.get('disposicionFinal');
+
+
+
+
+        function obtenerDatos() {
+            let objetivo = document.getElementById('objetivo').value;
+            let alcance = document.getElementById('alcance').value;
+            let referencias = document.getElementById('referencias').value;
+            let definiciones = document.getElementById('definiciones').value;
+            let procedimientos = document.getElementById('procedimientos').value;
+            let medioDeRetroalimentacion = document.getElementById('medioDeRetroalimentacion').value;
+            let perfiles = document.getElementById('perfiles').value;
+            //DATOS TABLA
+            let codigoDocumento = parseFloat(document.getElementById('NroCodificacion').value);
+            let nombreDocumento = document.getElementById('nombreDocumento').value;
+            let almacenamiento = document.getElementById('almacenamiento').value;
+            let proteccion = document.getElementById('proteccion').value;
+            let tiempoRetencion = parseFloat(document.getElementById('tiempoRetencion').value);
+            let disposicionFinal = document.getElementById('disposicionFinal').value;
+
+
+            document.procedmientoPropio.codigoDocumentoTabla.value = codigoDocumento;
+            document.procedmientoPropio.nombreDocumentoTabla.value = nombreDocumento;
+            document.procedmientoPropio.almacenamientoTabla.value = almacenamiento;
+            document.procedmientoPropio.proteccionTabla.value = proteccion;
+            document.procedmientoPropio.tiempoRetencionTabla.value = tiempoRetencion;
+            document.procedmientoPropio.disposicionFinalTabla.value = disposicionFinal;
+        }
+    </script>
+
 </body>
 
 </html>
