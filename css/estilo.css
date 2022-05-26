@@ -46,11 +46,11 @@ body {
     background-color: #11B09C;
 }
 
-table td {
+table th {
     border: 1.5px solid black;
 }
 
-.encabezadoFormularioTablas h6 {
+.encabezadoFormularioTablas {
     color: white;
     text-align: center;
 }

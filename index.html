@@ -13,7 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/estilo.css">
+
+
     <title>formulario front</title>
+
+
 </head>
 
 <body>
@@ -96,7 +100,7 @@
         <p> <span> Pie de portada: </span>La función del Pie de la portada es aclarar qué párrafo o párrafos se modificaron en la versión, cuál es la versión vigente y desde qué fecha. </p>
     </div>
     <div class="container formularioFondo">
-        <form method="get" action="" class="row mb-5" name="procedimientoPropio">
+        <form class="row mb-5" id="procedimientoPropioForm">
             <div class="header ">
                 <h4 class="titulo">Procedimiento Propio</h4>
             </div>
@@ -147,63 +151,7 @@
                 <label for="disposicionFinal">Disposición final </label>
                 <input class="form-control" type="text" placeholder="ej: borrado. backup. destrucción" id="disposicionFinal">
             </div>
-            <br>
-            <table id="grillaDocumentacionAsosciada" class="table table-responsive-md table-striped tablaDetalle mt-5 col-12">
-                <!--FILA-->
-                <tr class="encabezadoFormularioTablas">
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Codificación del documento</h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Nombre del documento</h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Almacenamiento</h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Protección</h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Tiempo de retención</h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6>Disposición final </h6>
-                    </td>
-                </tr>
-                <tr class="">
-                    <!--COLUMNA-->
-                    <td>
-                        <h6 name="codigoDocumentoTabla" id="codigoDocumentoTabla"></h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6 name="nombreDocumentoTabla" id="nombreDocumentoTabla"></h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6 name="almacenamientoTabla" id="almacenamientoTabla"></h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6 name="proteccionTabla" id="proteccionTabla"></h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
-                        <h6 name="tiempoRetencionTabla" id="tiempoRetencionTabla"></h6>
-                    </td>
-                    <!--COLUMNA-->
-                    <td>
 
-                        <h6 name="disposicionFinalTabla" id="disposicionFinalTabla"></h6>
-                    </td>
-                </tr>
-            </table>
             <div class="form-group col-6">
                 <label for="medioDeRetroalimentacion">Medio de retroalimentación. Metodología</label>
                 <textarea class="form-control" id="medioDeRetroalimentacion" rows="3"></textarea>
@@ -213,55 +161,122 @@
                 <textarea class="form-control" id="perfiles" rows="3"></textarea>
             </div>
             <div class="col-auto">
-                <button type="submit" class="mt-5 btn btn-primary mb-2" onClick="obtenerDatos()">Enviar</button>
+                <button type="submit" class="mt-5 btn btn-primary mb-2" onclick="obtenerDatos()">Enviar</button>
             </div>
         </form>
+        <br>
+
+        <table id="grillaDocumentacionAsosciada" class="table table-responsive-md table-striped tablaDetalle mt-5 col-12">
+            <!--FILA-->
+            <tr class="encabezadoFormularioTablas">
+                <!--COLUMNA-->
+                <th>
+                    Codificación del documento
+                </th>
+                <!--COLUMNA-->
+                <th>
+                    Nombre del documento
+                </th>
+                <!--COLUMNA-->
+                <th>
+                    Almacenamiento
+                </th>
+                <!--COLUMNA-->
+                <th>
+                    Protección
+                </th>
+                <!--COLUMNA-->
+                <th>
+                    Tiempo de retención
+                </th>
+                <!--COLUMNA-->
+                <th>
+                    Disposición final
+                </th>
+            </tr>
+            <tr class="">
+                <!--COLUMNA-->
+                <td name="codigoDocumentoTabla" id="codigoDocumentoTabla"> </td>
+                <!--COLUMNA-->
+                <td name="nombreDocumentoTabla" id="nombreDocumentoTabla"> </td>
+                <!--COLUMNA-->
+                <td name="almacenamientoTabla" id="almacenamientoTabla"> </td>
+                <!--COLUMNA-->
+                <td name="proteccionTabla" id="proteccionTabla"></td>
+                <!--COLUMNA-->
+                <td name="tiempoRetencionTabla" id="tiempoRetencionTabla"> </td>
+                <!--COLUMNA-->
+                <td name="disposicionFinalTabla" id="disposicionFinalTabla"> </td>
+            </tr>
+        </table>
     </div>
 
-    <script type="text/javascript">
-        const form = document.getElementById('procedimientoPropio');
-        form.addEventListener("submit", function(event) {
+
+
+    <script>
+        let guardarForm = document.getElementById(procedimientoPropioForm)
+        let guardarDatosForm = new FormData(guardarForm)
+
+        const form = document.getElementById(procedimientoPropioForm)
+        console.log(form)
+
+        procedimientoPropio.addEventListener("submit", function(event) {
+
             event.preventDefault();
-            let guardarDatosGrilla = new FormData(form)
+
+
+
             let datosGrillasRef = document.getElementById('grillaDocumentacionAsosciada');
             let newDatosGrillasRow = datosGrillasRef.insertRow(-1);
+
             let newDatosGrillasCelda = datosGrillasRef.insertCell(0);
+
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('NroCodificacion');
+
+            newDatosGrillasCelda = datosGrillasRef.insertCell(1);
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('nombreDocumento');
+
+            newDatosGrillasCelda = datosGrillasRef.insertCell(2);
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('almacenamiento');
+
+            newDatosGrillasCelda = datosGrillasRef.insertCell(3);
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('proteccion');
+
+            newDatosGrillasCelda = datosGrillasRef.insertCell(4);
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('tiempoRetencion');
+
+            newDatosGrillasCelda = datosGrillasRef.insertCell(5);
+            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('disposicionFinal');
+
+
         })
 
-        guardarDatosGrilla.get('NroCodificacion');
-        guardarDatosGrilla.get('nombreDocumento');
-        guardarDatosGrilla.get('almacenamiento');
-        guardarDatosGrilla.get('proteccion');
-        guardarDatosGrilla.get('tiempoRetencion');
-        guardarDatosGrilla.get('disposicionFinal');
 
+        /*  function obtenerDatos() {
+              // let objetivo = document.getElementById('objetivo').value;
+              // let alcance = document.getElementById('alcance').value;
+              // let referencias = document.getElementById('referencias').value;
+              // let definiciones = document.getElementById('definiciones').value;
+              // let procedimientos = document.getElementById('procedimientos').value;
+              // let medioDeRetroalimentacion = document.getElementById('medioDeRetroalimentacion').value;
+              // let perfiles = document.getElementById('perfiles').value;
+              //DATOS TABLA
+              let codigoDocumento = parseFloat(document.getElementById('NroCodificacion').value);
+              let nombreDocumento = document.getElementById('nombreDocumento').value;
+              let almacenamiento = document.getElementById('almacenamiento').value;
+              let proteccion = document.getElementById('proteccion').value;
+              let tiempoRetencion = parseFloat(document.getElementById('tiempoRetencion').value);
+              let disposicionFinal = document.getElementById('disposicionFinal').value;
 
+              console.log('funciono el onclic')
+              document.procedmientoPropio.codigoDocumentoTabla.value = codigoDocumento;
+              document.procedmientoPropio.nombreDocumentoTabla.value = nombreDocumento;
+              document.procedmientoPropio.almacenamientoTabla.value = almacenamiento;
+              document.procedmientoPropio.proteccionTabla.value = proteccion;
+              document.procedmientoPropio.tiempoRetencionTabla.value = tiempoRetencion;
+              document.procedmientoPropio.disposicionFinalTabla.value = disposicionFinal;
 
-
-        function obtenerDatos() {
-            let objetivo = document.getElementById('objetivo').value;
-            let alcance = document.getElementById('alcance').value;
-            let referencias = document.getElementById('referencias').value;
-            let definiciones = document.getElementById('definiciones').value;
-            let procedimientos = document.getElementById('procedimientos').value;
-            let medioDeRetroalimentacion = document.getElementById('medioDeRetroalimentacion').value;
-            let perfiles = document.getElementById('perfiles').value;
-            //DATOS TABLA
-            let codigoDocumento = parseFloat(document.getElementById('NroCodificacion').value);
-            let nombreDocumento = document.getElementById('nombreDocumento').value;
-            let almacenamiento = document.getElementById('almacenamiento').value;
-            let proteccion = document.getElementById('proteccion').value;
-            let tiempoRetencion = parseFloat(document.getElementById('tiempoRetencion').value);
-            let disposicionFinal = document.getElementById('disposicionFinal').value;
-
-
-            document.procedmientoPropio.codigoDocumentoTabla.value = codigoDocumento;
-            document.procedmientoPropio.nombreDocumentoTabla.value = nombreDocumento;
-            document.procedmientoPropio.almacenamientoTabla.value = almacenamiento;
-            document.procedmientoPropio.proteccionTabla.value = proteccion;
-            document.procedmientoPropio.tiempoRetencionTabla.value = tiempoRetencion;
-            document.procedmientoPropio.disposicionFinalTabla.value = disposicionFinal;
-        }
+          }*/
     </script>
 
 </body>
