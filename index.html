@@ -128,8 +128,8 @@
             <br>
 
             <div class="form-group col-4 mt-5">
-                <label for="NroCodificacion">Codificación del documento</label>
-                <input class="form-control" type="text" placeholder="" id="NroCodificacion">
+                <label for="nroCodificacion">Codificación del documento</label>
+                <input class="form-control" type="number" placeholder="" id="nroCodificacion">
             </div>
             <div class="form-group col-3 mt-5">
                 <label for="nombreDocumento">Nombre del documento</label>
@@ -161,7 +161,7 @@
                 <textarea class="form-control" id="perfiles" rows="3"></textarea>
             </div>
             <div class="col-auto">
-                <button type="submit" class="mt-5 btn btn-primary mb-2" onclick="obtenerDatos()">Enviar</button>
+                <button type="submit" class="mt-5 btn btn-primary mb-2" id="enviar">Enviar</button>
             </div>
         </form>
         <br>
@@ -214,70 +214,17 @@
 
 
     <script>
-        let guardarForm = document.getElementById(procedimientoPropioForm)
-        let guardarDatosForm = new FormData(guardarForm)
+        $("#enviar").click(function() {
 
-        const form = document.getElementById(procedimientoPropioForm)
-        console.log(form)
-
-        procedimientoPropio.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-
-
-            let datosGrillasRef = document.getElementById('grillaDocumentacionAsosciada');
-            let newDatosGrillasRow = datosGrillasRef.insertRow(-1);
-
-            let newDatosGrillasCelda = datosGrillasRef.insertCell(0);
-
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('NroCodificacion');
-
-            newDatosGrillasCelda = datosGrillasRef.insertCell(1);
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('nombreDocumento');
-
-            newDatosGrillasCelda = datosGrillasRef.insertCell(2);
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('almacenamiento');
-
-            newDatosGrillasCelda = datosGrillasRef.insertCell(3);
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('proteccion');
-
-            newDatosGrillasCelda = datosGrillasRef.insertCell(4);
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('tiempoRetencion');
-
-            newDatosGrillasCelda = datosGrillasRef.insertCell(5);
-            newDatosGrillasCelda.textContent = guardarDatosGrilla.get('disposicionFinal');
-
-
+            var codido = $("#nroCodificacion").val();
+            var nombreDocumento = $("#nombreDocumento").val();
+            var almacenamiento = $("#almacenamiento").val();
+            var proteccion = $("#proteccion").val();
+            var tiempoRetencion = $("#tiempoRetencion").val();
+            var disposicionFinal = $("#disposicionFinal").val();
         })
-
-
-        /*  function obtenerDatos() {
-              // let objetivo = document.getElementById('objetivo').value;
-              // let alcance = document.getElementById('alcance').value;
-              // let referencias = document.getElementById('referencias').value;
-              // let definiciones = document.getElementById('definiciones').value;
-              // let procedimientos = document.getElementById('procedimientos').value;
-              // let medioDeRetroalimentacion = document.getElementById('medioDeRetroalimentacion').value;
-              // let perfiles = document.getElementById('perfiles').value;
-              //DATOS TABLA
-              let codigoDocumento = parseFloat(document.getElementById('NroCodificacion').value);
-              let nombreDocumento = document.getElementById('nombreDocumento').value;
-              let almacenamiento = document.getElementById('almacenamiento').value;
-              let proteccion = document.getElementById('proteccion').value;
-              let tiempoRetencion = parseFloat(document.getElementById('tiempoRetencion').value);
-              let disposicionFinal = document.getElementById('disposicionFinal').value;
-
-              console.log('funciono el onclic')
-              document.procedmientoPropio.codigoDocumentoTabla.value = codigoDocumento;
-              document.procedmientoPropio.nombreDocumentoTabla.value = nombreDocumento;
-              document.procedmientoPropio.almacenamientoTabla.value = almacenamiento;
-              document.procedmientoPropio.proteccionTabla.value = proteccion;
-              document.procedmientoPropio.tiempoRetencionTabla.value = tiempoRetencion;
-              document.procedmientoPropio.disposicionFinalTabla.value = disposicionFinal;
-
-          }*/
     </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 </body>
 
