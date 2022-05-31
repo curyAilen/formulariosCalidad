@@ -47,7 +47,8 @@ body {
 }
 
 table th {
-    border: 1.5px solid black;
+    border: 1.5px solid rgb(239, 239, 239);
+    color: aliceblue;
 }
 
 .encabezadoFormularioTablas {
