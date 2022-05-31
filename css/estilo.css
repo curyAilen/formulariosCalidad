@@ -54,3 +54,19 @@ table th {
     color: white;
     text-align: center;
 }
+
+#perfilesYcompetencias {
+    margin-top: 110px;
+}
+
+.competencias {
+    background-color: #eaeaea;
+}
+
+.imagenPerfil {
+    z-index: 5;
+    margin-top: 146px;
+    margin-bottom: -132px;
+    margin-left: 37px;
+    max-width: 50%;
+}
