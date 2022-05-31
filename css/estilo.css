@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     max-width: 100%;
 }
@@ -60,13 +60,13 @@ table th {
 }
 
 .competencias {
-    background-color: #eaeaea;
+    background-color: #eaeaea4a;
 }
 
 .imagenPerfil {
     z-index: 5;
     margin-top: 146px;
-    margin-bottom: -132px;
-    margin-left: 37px;
+    margin-bottom: -143px;
+    margin-left: 55px;
     max-width: 50%;
 }
