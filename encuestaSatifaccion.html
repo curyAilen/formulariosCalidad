@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Encuesta de Satisfacción de Implementación</title>
+</head>
+
+<body>
+    <div class="container" id="contenedor">
+        <div class="row  fondoGris encabezadoSiglas">
+            <div class="text-center col-2 ">
+                <img src="./img/logo.png.png" alt="" width="60px" height="50px" id="logo"> </div>
+            <h1 class=" text-center col-8 titulo">Encuesta de Satisfacción de Implementación</h1>
+            <p class="text-center col-2">Siglas</p>
+        </div>
+    </div>
+    <div class="container">
+
+        <form class="row mb-5 mt-5 sombraCaja
+        bordeVerdeInfo" id="">
+            <h5 class=" col-7 tituloDeEncuesta">En relación con el material de la implementación</h5>
+            <table id="tablaSatifaccion1" class="table table-responsive-md table-striped   col-12 ">
+                <!--FILA-->
+                <tr class="">
+                    <!--COLUMNA-->
+                    <th>
+
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MUY BUENO
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        BUENO
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        REGULAR
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MAL
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MUY MAL
+                    </th>
+                    <th class="selector">
+                        NO SE/ NO CONTESTO
+                    </th>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="organizado">Organizado</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="organizado" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="organizado" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="organizado" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="organizado" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="organizado" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="organizado" value="noSe"></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="duracion">Duración</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="duracion" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="duracion" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="duracion" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="duracion" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="duracion" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="duracion" value="noSe"></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="horarioAperturayCierre">Horario de Apertura y Cierre</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="horarioAperturayCierre" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="horarioAperturayCierre" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="horarioAperturayCierre" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="horarioAperturayCierre" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="horarioAperturayCierre" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="horarioAperturayCierre" value="noSe"></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="diseñoMaterial">Diseño del Material</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="diseñoMaterial" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="diseñoMaterial" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="diseñoMaterial" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="diseñoMaterial" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="diseñoMaterial" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="diseñoMaterial" value="noSe"></td>
+                </tr>
+            </table>
+            <h5 class=" col-7 tituloDeEncuesta">En relación con el/ la implementador/ a</h5>
+            <table id="tablaSatifaccion2" class="table table-responsive-md table-striped col-12 ">
+                <!--FILA-->
+                <tr class="">
+                    <!--COLUMNA-->
+                    <th>
+
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MUY BUENO
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        BUENO
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        REGULAR
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MAL
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        MUY MAL
+                    </th>
+                    <th class="selector">
+                        NO SE/ NO CONTESTO
+                    </th>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="claridad">Claridad de la transmición de los conceptos</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="claridad" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="claridad" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="claridad" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="claridad" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="claridad" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="claridad" value="noSe"></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <label for="predisposicion">Predisposición a la respuesta a consultas e inquietudes</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="muyBueno" name="predisposicion" value="muyBueno"></td>
+                    <td class="selector"><input type="radio" id="bueno" name="predisposicion" value="bueno"></td>
+                    <td class="selector"> <input type="radio" id="regular" name="predisposicion" value="regular"></td>
+                    <td class="selector"> <input type="radio" id="malo" name="predisposicion" value="malo"></td>
+                    <td class="selector"> <input type="radio" id="muyMalo" name="predisposicion" value="muyMalo"></td>
+                    <td class="selector"> <input type="radio" id="noSe" name="predisposicion" value="noSe"></td>
+                </tr>
+
+            </table>
+            </table>
+            <h5 class=" col-7 tituloDeEncuesta">En relación con el/ la implementador/ a</h5>
+            <table id="tablaSatifaccion3" class="table table-responsive-md table-striped  col-12 ">
+                <!--FILA-->
+                <tr class="">
+                    <!--COLUMNA-->
+                    <th>
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        LAS EXCEDIO
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        LAS CUBRIÓ
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        LAS CUBRIÓ EN PARTE
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        NO LAS CUBRIÓ
+                    </th>
+                    <!--COLUMNA-->
+                    <th class="selector">
+                        NO SE / NO CONTESTÓ
+                    </th>
+                </tr>
+
+                <tr class="">
+                    <td>
+                        <label for="expectativas">La implementación, ¿Cubrió tus expectativas?</label>
+                    </td>
+                    <td class="selector"><input type="radio" id="excedio" name="expectativas" value="excedio"></td>
+                    <td class="selector"><input type="radio" id="curbio" name="expectativas" value="curbio"></td>
+                    <td class="selector"> <input type="radio" id="cubrioParte" name="expectativas" value="cubrioParte"></td>
+                    <td class="selector"> <input type="radio" id="noCurbio" name="expectativas" value="noCurbio"></td>
+
+                    <td class="selector"> <input type="radio" id="noSe" name="expectativas" value="noSe"></td>
+                </tr>
+
+            </table>
+
+            <div class="col-auto">
+                <button type="submit" class="mt-5 btn btn-primary mb-2" id="enviar">Enviar</button>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

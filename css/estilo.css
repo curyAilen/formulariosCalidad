@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     max-width: 100%;
+    font-size: 12px;
 }
 
 #contenedorEncabezado {
@@ -13,21 +14,16 @@ body {
     max-width: 100%;
 }
 
-.fondoGris {
-    background-color: rgb(216, 216, 216);
-}
-
-.tablaInfo {
-    border: 2px solid #11B09C;
-    padding-bottom: 45px;
-    padding-left: 25px;
-    padding-top: 25px;
-    padding-right: 25px;
-    border-radius: 0 115px 0 80px;
-}
-
-.tablaInfo p {
+p {
     font-size: 0.9rem;
+}
+
+
+/****************************GENERALES****************************************/
+
+.titulo {
+    text-align: center;
+    font-size: 18px;
 }
 
 .sombraCaja {
@@ -36,29 +32,38 @@ body {
     box-shadow: 10px 13px 10px -3px rgba(0, 0, 0, 0.19);
 }
 
-.tablaInfo h6 {
-    font-size: 1rem;
+.encabezadoSiglas {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.titulo {
-    text-align: center;
-}
-
-.formularioFondo {
+.fondoGris {
     background-color: rgba(246, 246, 246, 0.872);
 }
 
-.encabezadoFormularioTablas {
+.fondoColorDAS {
     background-color: #11B09C;
-}
-
-table th {
-    border: 1.5px solid rgb(239, 239, 239);
 }
 
 .encabezadoFormularioTablas {
     color: white;
     text-align: center;
+}
+
+.bordeVerdeInfo {
+    border: 2px solid #11B09C;
+    padding-bottom: 45px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+    border-radius: 0 115px 0 80px;
+}
+
+
+/************************************************************************/
+
+table th {
+    border: 1.5px solid rgb(239, 239, 239);
 }
 
 #perfilesYcompetencias {
@@ -75,4 +80,18 @@ table th {
     margin-bottom: -143px;
     margin-left: 55px;
     max-width: 50%;
+}
+
+.selector {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tituloDeEncuesta {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #11B09C;
+    font-weight: 500;
 }
