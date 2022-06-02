@@ -62,13 +62,9 @@
                 <label for="colaborador">Colaborador</label>
                 <input class="form-control" type="text" placeholder="" id="colaborador">
             </div>
-            <div class="col-auto">
-                <button type="submit" class="mt-5 btn btn-primary mb-2" id="enviar">Enviar</button>
-            </div>
 
-        </form>
-        <br>
-        <form class="row mb-5 " id="procedimientoPropioFormGrilla">
+
+
             <div class="form-group col-6 mt-5">
                 <label for="numero">N°</label>
                 <input class="form-control" type="number" placeholder="" id="numero">
@@ -87,7 +83,7 @@
                 <input class="form-control" type="date" placeholder="" id="fechaCumplimiento">
             </div>
             <div class="col-auto">
-                <button type="submit" class="mt-5 btn btn-primary mb-2" id="enviar">Enviar</button>
+                <button type="button" class="mt-5 btn btn-primary mb-2" id="enviar">Enviar</button>
             </div>
 
         </form>
@@ -179,15 +175,21 @@
 
 
     <script>
-        $("#enviar").click(function() {
+        document.getElementById("enviar").addEventListener("click", guardarDatos);
 
-            var codido = $("#nroCodificacion").val();
-            var nombreDocumento = $("#nombreDocumento").val();
-            var almacenamiento = $("#almacenamiento").val();
-            var proteccion = $("#proteccion").val();
-            var tiempoRetencion = $("#tiempoRetencion").val();
-            var disposicionFinal = $("#disposicionFinal").val();
-        })
+        function guardarDatos() {
+            alert("se guardo el dato " + codigo);
+            var codigo = parseInt(document.getElementById("nroCodificacion").value());
+            var nombreDocumento = document.getElementById("nombreDocumento").value();
+            var almacenamiento = document.getElementById("almacenamiento").value();
+            var proteccion = document.getElementById("proteccion").value();
+            var tiempoRetencion = document.getElementById("tiempoRetencion").value();
+            var disposicionFinal = document.getElementById("disposicionFinal").value();
+        }
+
+        function crearNodo(elemento) {
+
+        }
     </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
